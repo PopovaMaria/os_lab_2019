@@ -11,7 +11,10 @@
 #define SHW_ADR(ID, I) (printf("ID %s \t is at virtual address: %8X\n", ID, &I))
 
 extern int etext, edata, end; /* Global variables for process
-                                 memory */
+                                 memory
+etext - Первый адрес за концом сегмента текста (кода программы).
+edata - Первый адрес за концом сегмента инициализированных данных.
+end - Первый адрес за концом сегмента неинициализированных данных (сегмента BSS).*/
 
 char *cptr = "This message is output by the function showit()\n"; /* Static */
 char buffer1[25];
